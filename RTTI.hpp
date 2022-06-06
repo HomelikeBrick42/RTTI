@@ -189,4 +189,52 @@ namespace RTTI {
         return integerType;
     }
 
+    template<>
+    inline const Type& Type::Get<signed short>(TypeFlags flags) {
+        static const IntegerType integerType(flags, IntegerKind::Short, true);
+        return integerType;
+    }
+
+    template<>
+    inline const Type& Type::Get<unsigned short>(TypeFlags flags) {
+        static const IntegerType integerType(flags, IntegerKind::Short, false);
+        return integerType;
+    }
+
+    template<>
+    inline const Type& Type::Get<signed int>(TypeFlags flags) {
+        static const IntegerType integerType(flags, IntegerKind::Int, true);
+        return integerType;
+    }
+
+    template<>
+    inline const Type& Type::Get<unsigned int>(TypeFlags flags) {
+        static const IntegerType integerType(flags, IntegerKind::Int, false);
+        return integerType;
+    }
+
+    template<>
+    inline const Type& Type::Get<signed long>(TypeFlags flags) {
+        static const IntegerType integerType(flags, IntegerKind::Long, true);
+        return integerType;
+    }
+
+    template<>
+    inline const Type& Type::Get<unsigned long>(TypeFlags flags) {
+        static const IntegerType integerType(flags, IntegerKind::Long, false);
+        return integerType;
+    }
+
+    template<>
+    inline const Type& Type::Get<signed long long>(TypeFlags flags) {
+        static const IntegerType integerType(flags, IntegerKind::LongLong, true);
+        return integerType;
+    }
+
+    template<>
+    inline const Type& Type::Get<unsigned long long>(TypeFlags flags) {
+        static const IntegerType integerType(flags, IntegerKind::LongLong, false);
+        return integerType;
+    }
+
 }
